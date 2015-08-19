@@ -1,0 +1,30 @@
+{
+  "name": "P34Utils",
+  "version": "0.0.9",
+  "summary": "Some useful utils classes.",
+  "homepage": "https://github.com/pilot34/P34Utils",
+  "license": "MIT",
+  "authors": {
+    "pilot34": "gleb34@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/pilot34/P34Utils.git"
+  },
+  "platforms": {
+    "ios": "5.0"
+  },
+  "source_files": [
+    "*.{h,m}",
+    "P34Utils/*.{h,m}"
+  ],
+  "requires_arc": true,
+  "dependencies": {
+    "AFNetworking": [
+
+    ],
+    "Reachability": [
+
+    ]
+  },
+  "frameworks": "QuartzCore"
+}
