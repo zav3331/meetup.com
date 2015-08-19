@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E3151D31B85208D00E584A8 /* ZVServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3151D21B85208D00E584A8 /* ZVServerManager.m */; };
+		4E3151D61B85246300E584A8 /* ZVMeta.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3151D51B85246300E584A8 /* ZVMeta.m */; };
+		4E3151DF1B8524BD00E584A8 /* ZVOpenEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3151DE1B8524BD00E584A8 /* ZVOpenEvent.m */; };
+		4E3151E21B8524DC00E584A8 /* ZVCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3151E11B8524DC00E584A8 /* ZVCategory.m */; };
+		4E3151E51B8528CA00E584A8 /* ZVServerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3151E41B8528CA00E584A8 /* ZVServerObject.m */; };
 		4E9330D51B85063200DC59E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9330D41B85063200DC59E4 /* main.m */; };
 		4E9330D81B85063200DC59E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9330D71B85063200DC59E4 /* AppDelegate.m */; };
 		4E9330DB1B85063200DC59E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9330DA1B85063200DC59E4 /* ViewController.m */; };
@@ -28,6 +33,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E3151D11B85208D00E584A8 /* ZVServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZVServerManager.h; sourceTree = "<group>"; };
+		4E3151D21B85208D00E584A8 /* ZVServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZVServerManager.m; sourceTree = "<group>"; };
+		4E3151D41B85246300E584A8 /* ZVMeta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZVMeta.h; sourceTree = "<group>"; };
+		4E3151D51B85246300E584A8 /* ZVMeta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZVMeta.m; sourceTree = "<group>"; };
+		4E3151DD1B8524BD00E584A8 /* ZVOpenEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZVOpenEvent.h; sourceTree = "<group>"; };
+		4E3151DE1B8524BD00E584A8 /* ZVOpenEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZVOpenEvent.m; sourceTree = "<group>"; };
+		4E3151E01B8524DC00E584A8 /* ZVCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZVCategory.h; sourceTree = "<group>"; };
+		4E3151E11B8524DC00E584A8 /* ZVCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZVCategory.m; sourceTree = "<group>"; };
+		4E3151E31B8528CA00E584A8 /* ZVServerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZVServerObject.h; sourceTree = "<group>"; };
+		4E3151E41B8528CA00E584A8 /* ZVServerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZVServerObject.m; sourceTree = "<group>"; };
 		4E9330CF1B85063200DC59E4 /* OpenEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9330D31B85063200DC59E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E9330D41B85063200DC59E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -82,6 +97,37 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4E3151CE1B85206C00E584A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4E3151E31B8528CA00E584A8 /* ZVServerObject.h */,
+				4E3151E41B8528CA00E584A8 /* ZVServerObject.m */,
+				4E3151D41B85246300E584A8 /* ZVMeta.h */,
+				4E3151D51B85246300E584A8 /* ZVMeta.m */,
+				4E3151DD1B8524BD00E584A8 /* ZVOpenEvent.h */,
+				4E3151DE1B8524BD00E584A8 /* ZVOpenEvent.m */,
+				4E3151E01B8524DC00E584A8 /* ZVCategory.h */,
+				4E3151E11B8524DC00E584A8 /* ZVCategory.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4E3151CF1B85206C00E584A8 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				4E3151D11B85208D00E584A8 /* ZVServerManager.h */,
+				4E3151D21B85208D00E584A8 /* ZVServerManager.m */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		4E3151D01B85206C00E584A8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		4E9330C61B85063200DC59E4 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +151,9 @@
 		4E9330D11B85063200DC59E4 /* OpenEvents */ = {
 			isa = PBXGroup;
 			children = (
+				4E3151CE1B85206C00E584A8 /* Models */,
+				4E3151CF1B85206C00E584A8 /* Server */,
+				4E3151D01B85206C00E584A8 /* UI */,
 				4E9330D61B85063200DC59E4 /* AppDelegate.h */,
 				4E9330D71B85063200DC59E4 /* AppDelegate.m */,
 				4E9330D91B85063200DC59E4 /* ViewController.h */,
@@ -278,8 +327,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E3151E21B8524DC00E584A8 /* ZVCategory.m in Sources */,
+				4E3151E51B8528CA00E584A8 /* ZVServerObject.m in Sources */,
+				4E3151DF1B8524BD00E584A8 /* ZVOpenEvent.m in Sources */,
 				4E9330DB1B85063200DC59E4 /* ViewController.m in Sources */,
 				4E9330D81B85063200DC59E4 /* AppDelegate.m in Sources */,
+				4E3151D31B85208D00E584A8 /* ZVServerManager.m in Sources */,
+				4E3151D61B85246300E584A8 /* ZVMeta.m in Sources */,
 				4E9330D51B85063200DC59E4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
