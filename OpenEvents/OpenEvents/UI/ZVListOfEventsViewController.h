@@ -10,6 +10,5 @@
 
 @interface ZVListOfEventsViewController : UIViewController
 
-
 @end
 
