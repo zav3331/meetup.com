@@ -74,12 +74,14 @@
 
 - (void)loadCategories {
     
+    __weak typeof(self) wself = self;
+
     [[ZVServerManager sharedManager] getListCategoriesonSuccess:^(NSArray *categories) {
         
         ZVCategory *category = [ZVCategory findTechCategoryInArray:categories];
         
       [[ZVServerManager sharedManager] getListOpenEventsWithCategoryID:[NSString stringWithFormat:@"%@", category.identifier] andLocation:self.location andSuccess:^(NSArray *openEvents) {
-          self.eventsArray = openEvents;
+          wself.eventsArray = openEvents;
           [self.tableView reloadData];
           
           if (self.progressHUD.visible) {
