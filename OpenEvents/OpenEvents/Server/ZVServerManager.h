@@ -10,7 +10,7 @@
 
 @interface ZVServerManager : NSObject
 
-+ (ZVServerManager *) sharedManager;
++ (ZVServerManager *)sharedManager;
 
 - (void)getListCategoriesonSuccess:(void(^)(NSArray *categories))success
                          onFailure:(void(^)(NSError* error, NSInteger statusCode)) failure;

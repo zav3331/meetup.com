@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 ZV. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ZVListOfEventsViewController.h"
 
-@interface ViewController ()
+@interface ZVListOfEventsViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ZVListOfEventsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

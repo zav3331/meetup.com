@@ -12,9 +12,10 @@
 		4E3151DF1B8524BD00E584A8 /* ZVOpenEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3151DE1B8524BD00E584A8 /* ZVOpenEvent.m */; };
 		4E3151E21B8524DC00E584A8 /* ZVCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3151E11B8524DC00E584A8 /* ZVCategory.m */; };
 		4E3151E51B8528CA00E584A8 /* ZVServerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3151E41B8528CA00E584A8 /* ZVServerObject.m */; };
+		4E3151E91B85493D00E584A8 /* ZVLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3151E81B85493D00E584A8 /* ZVLocationManager.m */; };
 		4E9330D51B85063200DC59E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9330D41B85063200DC59E4 /* main.m */; };
 		4E9330D81B85063200DC59E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9330D71B85063200DC59E4 /* AppDelegate.m */; };
-		4E9330DB1B85063200DC59E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9330DA1B85063200DC59E4 /* ViewController.m */; };
+		4E9330DB1B85063200DC59E4 /* ZVListOfEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9330DA1B85063200DC59E4 /* ZVListOfEventsViewController.m */; };
 		4E9330DE1B85063200DC59E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9330DC1B85063200DC59E4 /* Main.storyboard */; };
 		4E9330E01B85063200DC59E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9330DF1B85063200DC59E4 /* Images.xcassets */; };
 		4E9330E31B85063200DC59E4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E9330E11B85063200DC59E4 /* LaunchScreen.xib */; };
@@ -43,13 +44,15 @@
 		4E3151E11B8524DC00E584A8 /* ZVCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZVCategory.m; sourceTree = "<group>"; };
 		4E3151E31B8528CA00E584A8 /* ZVServerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZVServerObject.h; sourceTree = "<group>"; };
 		4E3151E41B8528CA00E584A8 /* ZVServerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZVServerObject.m; sourceTree = "<group>"; };
+		4E3151E71B85493D00E584A8 /* ZVLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZVLocationManager.h; sourceTree = "<group>"; };
+		4E3151E81B85493D00E584A8 /* ZVLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZVLocationManager.m; sourceTree = "<group>"; };
 		4E9330CF1B85063200DC59E4 /* OpenEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9330D31B85063200DC59E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E9330D41B85063200DC59E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E9330D61B85063200DC59E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4E9330D71B85063200DC59E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4E9330D91B85063200DC59E4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4E9330DA1B85063200DC59E4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4E9330D91B85063200DC59E4 /* ZVListOfEventsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZVListOfEventsViewController.h; path = ../ZVListOfEventsViewController.h; sourceTree = "<group>"; };
+		4E9330DA1B85063200DC59E4 /* ZVListOfEventsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ZVListOfEventsViewController.m; path = ../ZVListOfEventsViewController.m; sourceTree = "<group>"; };
 		4E9330DD1B85063200DC59E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E9330DF1B85063200DC59E4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4E9330E21B85063200DC59E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -124,8 +127,20 @@
 		4E3151D01B85206C00E584A8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				4E9330D91B85063200DC59E4 /* ZVListOfEventsViewController.h */,
+				4E9330DA1B85063200DC59E4 /* ZVListOfEventsViewController.m */,
+				4E9330DC1B85063200DC59E4 /* Main.storyboard */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		4E3151E61B85492300E584A8 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				4E3151E71B85493D00E584A8 /* ZVLocationManager.h */,
+				4E3151E81B85493D00E584A8 /* ZVLocationManager.m */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		4E9330C61B85063200DC59E4 = {
@@ -151,16 +166,12 @@
 		4E9330D11B85063200DC59E4 /* OpenEvents */ = {
 			isa = PBXGroup;
 			children = (
+				4E3151E61B85492300E584A8 /* Location */,
 				4E3151CE1B85206C00E584A8 /* Models */,
 				4E3151CF1B85206C00E584A8 /* Server */,
 				4E3151D01B85206C00E584A8 /* UI */,
 				4E9330D61B85063200DC59E4 /* AppDelegate.h */,
 				4E9330D71B85063200DC59E4 /* AppDelegate.m */,
-				4E9330D91B85063200DC59E4 /* ViewController.h */,
-				4E9330DA1B85063200DC59E4 /* ViewController.m */,
-				4E9330DC1B85063200DC59E4 /* Main.storyboard */,
-				4E9330DF1B85063200DC59E4 /* Images.xcassets */,
-				4E9330E11B85063200DC59E4 /* LaunchScreen.xib */,
 				4E9330D21B85063200DC59E4 /* Supporting Files */,
 			);
 			path = OpenEvents;
@@ -169,6 +180,8 @@
 		4E9330D21B85063200DC59E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4E9330E11B85063200DC59E4 /* LaunchScreen.xib */,
+				4E9330DF1B85063200DC59E4 /* Images.xcassets */,
 				4E9330D31B85063200DC59E4 /* Info.plist */,
 				4E9330D41B85063200DC59E4 /* main.m */,
 			);
@@ -330,9 +343,10 @@
 				4E3151E21B8524DC00E584A8 /* ZVCategory.m in Sources */,
 				4E3151E51B8528CA00E584A8 /* ZVServerObject.m in Sources */,
 				4E3151DF1B8524BD00E584A8 /* ZVOpenEvent.m in Sources */,
-				4E9330DB1B85063200DC59E4 /* ViewController.m in Sources */,
+				4E9330DB1B85063200DC59E4 /* ZVListOfEventsViewController.m in Sources */,
 				4E9330D81B85063200DC59E4 /* AppDelegate.m in Sources */,
 				4E3151D31B85208D00E584A8 /* ZVServerManager.m in Sources */,
+				4E3151E91B85493D00E584A8 /* ZVLocationManager.m in Sources */,
 				4E3151D61B85246300E584A8 /* ZVMeta.m in Sources */,
 				4E9330D51B85063200DC59E4 /* main.m in Sources */,
 			);
@@ -363,6 +377,7 @@
 				4E9330DD1B85063200DC59E4 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		4E9330E11B85063200DC59E4 /* LaunchScreen.xib */ = {
