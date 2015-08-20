@@ -27,6 +27,10 @@
     [self startGetLocation];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -43,6 +47,12 @@
     [cell updateCellWithEvent:event];
     
     return cell;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    ZVOpenEvent *event = self.eventsArray[indexPath.row];
+    return [ZVListOfEventsCell heightForEvent:event];
 }
 
 - (void)startGetLocation {
@@ -65,10 +75,8 @@
         ZVCategory *category = [ZVCategory findTechCategoryInArray:categories];
         
       [[ZVServerManager sharedManager] getListOpenEventsWithCategoryID:[NSString stringWithFormat:@"%@", category.identifier] andLocation:self.location andSuccess:^(NSArray *openEvents) {
-          
           self.eventsArray = openEvents;
           [self.tableView reloadData];
-          
       } onFailure:^(NSError *error, NSInteger statusCode) {
           [self showAlertError];
       }];

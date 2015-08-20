@@ -12,5 +12,6 @@
 @interface ZVListOfEventsCell : UITableViewCell
 
 - (void)updateCellWithEvent:(ZVOpenEvent *)event;
++ (CGFloat)heightForEvent:(ZVOpenEvent *)event;
 
 @end

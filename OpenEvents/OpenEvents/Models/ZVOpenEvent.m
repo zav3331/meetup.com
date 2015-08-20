@@ -12,10 +12,12 @@ static NSString * const kTimeField = @"time";
 static NSString * const kNameField = @"name";
 static NSString * const kGroupField = @"group";
 static NSString * const kWhoField = @"who";
+static NSString * const kDurationField = @"duration";
 
 @interface ZVOpenEvent ()
 
 @property (strong, nonatomic, readwrite) NSDate *time;
+@property (strong, nonatomic, readwrite) NSNumber *duration;
 @property (strong, nonatomic, readwrite) NSString *name;
 @property (strong, nonatomic, readwrite) NSString *who;
 
@@ -33,6 +35,7 @@ static NSString * const kWhoField = @"who";
             
             self.time = [NSDate dateWithTimeIntervalSince1970:interval];
             self.name = [responseObject valueForKey:kNameField];
+            self.duration = [responseObject valueForKey:kDurationField];
             
             if ([[responseObject valueForKey:kGroupField] isKindOfClass:[NSDictionary class]]) {
                 self.who = [[responseObject valueForKey:kGroupField] valueForKey:kWhoField];

@@ -12,6 +12,7 @@
 @interface ZVOpenEvent : ZVServerObject
 
 @property (strong, nonatomic, readonly) NSDate *time;
+@property (strong, nonatomic, readonly) NSNumber *duration;
 @property (strong, nonatomic, readonly) NSString *name;
 @property (strong, nonatomic, readonly) NSString *who;
 
