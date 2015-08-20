@@ -20,6 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.6.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - MTDates (1.0.2)
   - P34Utils (0.0.9):
     - AFNetworking
     - Reachability
@@ -28,6 +29,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - MTDates
   - P34Utils (from `https://github.com/pilot34/P34Utils.git`)
   - SVProgressHUD
 
@@ -42,6 +44,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
+  MTDates: aa8006ac046c3fc4f2bb9df95603e9b5bdac9467
   P34Utils: 9457493011f0edd26f09fd771d83ff530bb9d147
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
