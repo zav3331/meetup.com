@@ -11,12 +11,14 @@
 #import "ZVLocationManager.h"
 #import "ZVServerManager.h"
 #import "ZVCategory.h"
+#import <JGProgressHUD.h>
 
 @interface ZVListOfEventsViewController ()
 
 @property (strong, nonatomic) NSArray *eventsArray;
 @property (strong, nonatomic) CLLocation *location;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) JGProgressHUD *progressHUD;
 
 @end
 
@@ -29,6 +31,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.progressHUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleLight];
+    [self.progressHUD showInView:self.view];
 }
 
 #pragma mark - UITableViewDataSource
@@ -77,6 +81,10 @@
       [[ZVServerManager sharedManager] getListOpenEventsWithCategoryID:[NSString stringWithFormat:@"%@", category.identifier] andLocation:self.location andSuccess:^(NSArray *openEvents) {
           self.eventsArray = openEvents;
           [self.tableView reloadData];
+          
+          if (self.progressHUD.visible) {
+              [self.progressHUD dismiss];
+          }
       } onFailure:^(NSError *error, NSInteger statusCode) {
           [self showAlertError];
       }];
@@ -86,6 +94,10 @@
 }
 
 - (void)showAlertError {
+    
+    if (self.progressHUD.visible) {
+        [self.progressHUD dismiss];
+    }
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Something went wrong" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];

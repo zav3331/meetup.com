@@ -88,6 +88,14 @@ static NSString * const kMeetupAPIField = @"key";
                                  @"lat"         : [NSNumber numberWithDouble:location.coordinate.latitude],
                                  @"lon"         : [NSNumber numberWithDouble:location.coordinate.longitude]
                                  };
+    
+    if (!location) {
+        parameters = @{
+                       @"category"    : categoryID,
+                       @"status"      : @"upcoming",
+                       @"time"        : @",1w",
+                       };
+    }
 
     [self baseRequestWithName:kRequestOpenEventsKey andParameters:parameters onSuccess:^(NSArray *results, ZVMeta *meta) {
         
