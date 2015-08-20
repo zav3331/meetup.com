@@ -16,19 +16,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9qp-nH-3lQ">
-                                <rect key="frame" x="244" y="305" width="123" height="29"/>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                </segments>
-                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="U4C-M5-dwH">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ZVListOfEventsCell" rowHeight="50" id="852-4r-q1c" customClass="ZVListOfEventsCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="852-4r-q1c" id="f5v-2n-Wwg">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsL-Kv-Qd1">
+                                                    <rect key="frame" x="17" y="13" width="575" height="28"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="g28-N4-NCR">
+                                                    <rect key="frame" x="131" y="0.0" width="461" height="18"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="n8r-cP-7rZ">
+                                                    <rect key="frame" x="17" y="0.0" width="106" height="19"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="timeEventLabel" destination="n8r-cP-7rZ" id="kg2-Y8-OSd"/>
+                                            <outlet property="titleEventLabel" destination="GsL-Kv-Qd1" id="BYC-v0-VgL"/>
+                                            <outlet property="whoLabel" destination="g28-N4-NCR" id="Phq-Xs-iWD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="aYU-sJ-JTm"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="NyK-ld-8sR"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="U4C-M5-dwH" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="2kx-wi-kaw"/>
+                            <constraint firstItem="U4C-M5-dwH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="8Br-X8-eif"/>
+                            <constraint firstItem="U4C-M5-dwH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="HGz-d1-ude"/>
+                            <constraint firstAttribute="trailing" secondItem="U4C-M5-dwH" secondAttribute="trailing" id="MWy-fT-3e4"/>
+                            <constraint firstAttribute="trailing" secondItem="U4C-M5-dwH" secondAttribute="trailing" id="VlU-CH-CnT"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="U4C-M5-dwH" secondAttribute="bottom" id="jvM-VV-YL9"/>
+                            <constraint firstItem="U4C-M5-dwH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="oSA-V4-JZE"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2kx-wi-kaw"/>
+                                <exclude reference="VlU-CH-CnT"/>
+                                <exclude reference="oSA-V4-JZE"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="U4C-M5-dwH" id="sjo-yi-mLx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304" y="338"/>
         </scene>
     </scenes>
 </document>

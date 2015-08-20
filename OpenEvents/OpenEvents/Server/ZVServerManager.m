@@ -13,6 +13,7 @@
 #import "ZVOpenEvent.h"
 #import <Reachability+P34Utils.h>
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 static NSString * const kBaseServerURL = @"https://api.meetup.com/2/";
 static NSString * const kMeetupAPIKey = @"3c72695f61204b653b192d4d45206364";
@@ -54,7 +55,7 @@ static NSString * const kMeetupAPIField = @"key";
 }
 
 - (void)getListCategoriesonSuccess:(void(^)(NSArray *categories))success
-                         onFailure:(void(^)(NSError* error, NSInteger statusCode)) failure {
+                         onFailure:(void(^)(NSError* error, NSInteger statusCode))failure {
     
     [self baseRequestWithName:kRequestCategoriesKey andParameters:nil onSuccess:^(NSArray *results, ZVMeta *meta) {
         
@@ -75,16 +76,17 @@ static NSString * const kMeetupAPIField = @"key";
     }];
 }
 
-
-#warning add location
 - (void)getListOpenEventsWithCategoryID:(NSString *)categoryID
+                            andLocation:(CLLocation *)location
                              andSuccess:(void(^)(NSArray *openEvents))success
-                              onFailure:(void(^)(NSError* error, NSInteger statusCode)) failure {
+                              onFailure:(void(^)(NSError* error, NSInteger statusCode))failure {
     
     NSDictionary *parameters = @{
                                  @"category"    : categoryID,
                                  @"status"      : @"upcoming",
                                  @"time"        : @",1w",
+                                 @"lat"         : [NSNumber numberWithDouble:location.coordinate.latitude],
+                                 @"lon"         : [NSNumber numberWithDouble:location.coordinate.longitude]
                                  };
 
     [self baseRequestWithName:kRequestOpenEventsKey andParameters:parameters onSuccess:^(NSArray *results, ZVMeta *meta) {

@@ -31,7 +31,7 @@ static NSString * const kShortNameForTech = @"Tech";
         if ([responseObject isKindOfClass:[NSDictionary class]]) {
             self.name = [responseObject valueForKey:kNameField];
             self.shortname = [responseObject valueForKey:kShortnameField];
-            self.identifier = [responseObject valueForKey:kShortnameField];
+            self.identifier = [responseObject valueForKey:kIDField];
         }
     }
     

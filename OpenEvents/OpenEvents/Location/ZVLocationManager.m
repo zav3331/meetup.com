@@ -58,6 +58,7 @@
     
     if (self.successBlock) {
         self.successBlock(location);
+        self.successBlock = nil;
     }
     
     [manager stopUpdatingLocation];

@@ -7,16 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+@class CLLocation;
 
 @interface ZVServerManager : NSObject
 
 + (ZVServerManager *)sharedManager;
 
 - (void)getListCategoriesonSuccess:(void(^)(NSArray *categories))success
-                         onFailure:(void(^)(NSError* error, NSInteger statusCode)) failure;
+                         onFailure:(void(^)(NSError* error, NSInteger statusCode))failure;
 
 - (void)getListOpenEventsWithCategoryID:(NSString *)categoryID
+                            andLocation:(CLLocation *)location
                              andSuccess:(void(^)(NSArray *openEvents))success
-                              onFailure:(void(^)(NSError* error, NSInteger statusCode)) failure;
+                              onFailure:(void(^)(NSError* error, NSInteger statusCode))failure;
 
 @end

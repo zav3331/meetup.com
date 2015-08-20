@@ -44,7 +44,7 @@ static NSString * const kWhoField = @"who";
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%@\n %@\n %@\n ------------- ", self.time, self.who, self.time];
+    return [NSString stringWithFormat:@"%@\n %@\n %@\n ------------- ", self.time, self.who, self.name];
 }
 
 @end
